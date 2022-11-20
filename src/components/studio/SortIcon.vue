@@ -1,25 +1,17 @@
 <!-- https://next.vuetifyjs.com/en/components/images/ -->
 
 <template>
-  <!-- // UserWhite.png -->
   <v-img
-    class="user-icon"
-    src="src/assets/user.png"
-    max-width="30px"
+    src="src/assets/nav/sort_black.png"
+    max-width="40px"
+    min-width="40px"
     margin-left="10px"
   />
 </template>
 
-<style>
-.user-icon {
-  max-width: 30px;
-  margin-left: 10px;
-}
-</style>
-
 <script lang="ts">
 export default {
-  name: "UserIcon",
+  name: "SortIcon",
 
   components: {},
 

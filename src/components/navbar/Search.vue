@@ -10,7 +10,7 @@
 .search {
   width: 80%;
   color: white;
-  margin-left: 10px
+  margin-left: 10px;
 }
 </style>
 

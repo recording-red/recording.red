@@ -2,7 +2,12 @@
 
 <template>
   <!-- // LogoHiragino.png -->
-  <v-img class="logo" src="src/assets/logo.png" max-width="150px" margin-left="10px"/>
+  <v-img
+    class="logo"
+    src="src/assets/logo.png"
+    max-width="150px"
+    margin-left="10px"
+  />
 </template>
 
 <style>
