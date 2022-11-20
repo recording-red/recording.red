@@ -2,7 +2,7 @@
 
 <template>
   <!-- // Guitar.png -->
-  <v-img class="instrument-icon" src="src/assets/intruments/guitar_white.png" />
+  <v-img class="instrument-icon" src="@/assets/intruments/guitar_white.png" />
 </template>
 
 <style>

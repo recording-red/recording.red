@@ -4,7 +4,7 @@
   <!-- // SearchWhite.png -->
   <v-img
     class="search-icon"
-    src="src/assets/search.png"
+    src="@/assets/search.png"
     max-width="30px"
     margin-left="10px"
   />

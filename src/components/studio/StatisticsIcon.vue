@@ -3,7 +3,7 @@
 <template>
   <v-img
     class="stats-icon"
-    src="src/assets/nav/stats_black.png"
+    src="@/assets/nav/stats_black.png"
     max-width="40px"
     min-width="40px"
     margin-left="10px"

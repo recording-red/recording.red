@@ -3,7 +3,7 @@
 <template>
   <v-img
     class="list-icon"
-    src="src/assets/nav/list_black.png"
+    src="@/assets/nav/list_black.png"
     max-width="40px"
     min-width="40px"
     margin-left="10px"

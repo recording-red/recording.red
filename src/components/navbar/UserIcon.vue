@@ -4,7 +4,7 @@
   <!-- // UserWhite.png -->
   <v-img
     class="user-icon"
-    src="src/assets/user.png"
+    src="@/assets/user.png"
     max-width="30px"
     margin-left="10px"
   />

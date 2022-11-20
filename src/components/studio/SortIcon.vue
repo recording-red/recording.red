@@ -2,7 +2,7 @@
 
 <template>
   <v-img
-    src="src/assets/nav/sort_black.png"
+    src="@/assets/nav/sort_black.png"
     max-width="40px"
     min-width="40px"
     margin-left="10px"

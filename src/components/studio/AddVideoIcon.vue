@@ -2,7 +2,7 @@
 
 <template>
   <v-img
-    src="src/assets/nav/add_black.png"
+    src="@/assets/nav/add_black.png"
     max-width="40px"
     min-width="40px"
     margin-left="10px"
