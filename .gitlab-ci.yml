@@ -1,0 +1,26 @@
+image: archlinux/archlinux:latest
+
+before_script:
+  - pacman -Syyu
+  - pacman -S --noconfirm nodejs npm aws-cli
+
+cache:
+  paths:
+    - node_modules/
+    - .svelte-kit/
+
+install-job:
+  stage: build
+  script:
+    - bash ci/install.sh
+
+test-job:
+  stage: test
+  script:
+    - bash ci/test.sh
+
+build-and-deploy-job:
+  stage: deploy
+  script:
+    - bash ci/build.sh
+    - bash ci/deploy.sh

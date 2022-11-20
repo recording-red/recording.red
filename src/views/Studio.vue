@@ -1,8 +1,6 @@
 <template>
   <Header />
   <VideoTable />
-
-
 </template>
 
 <script lang="ts">
@@ -12,7 +10,7 @@ import VideoTable from "@/components/studio/VideoTable.vue";
 export default {
   name: "Studio",
 
-  components: {Header, VideoTable},
+  components: { Header, VideoTable },
 
   props: {},
 };

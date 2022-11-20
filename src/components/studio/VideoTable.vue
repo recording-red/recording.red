@@ -12,7 +12,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="item in desserts" :key="item.name">
+      <tr v-for="item in videos" :key="item.name">
         <td>{{ item.name }}</td>
         <td>{{ item.category }}</td>
         <td>{{ item.upload_date }}</td>
@@ -35,7 +35,8 @@ export default {
 
   data() {
     return {
-      desserts: [
+      videos: [],
+      videosz: [
         {
           name: "Titre 1",
           category: "guitare",
