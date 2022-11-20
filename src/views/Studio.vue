@@ -11,7 +11,5 @@ export default {
   name: "Studio",
 
   components: { Header, VideoTable },
-
-  props: {},
 };
 </script>

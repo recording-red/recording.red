@@ -7,9 +7,5 @@
 <script lang="ts">
 export default {
   name: "ChannelDropdown",
-
-  components: {},
-
-  props: {},
 };
 </script>

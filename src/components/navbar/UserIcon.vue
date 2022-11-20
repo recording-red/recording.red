@@ -20,9 +20,5 @@
 <script lang="ts">
 export default {
   name: "UserIcon",
-
-  components: {},
-
-  props: {},
 };
 </script>

@@ -20,9 +20,5 @@
 <script lang="ts">
 export default {
   name: "SearchIcon",
-
-  components: {},
-
-  props: {},
 };
 </script>

@@ -29,21 +29,16 @@
 export default {
   name: "VideoTable",
 
-  components: {},
-
-  props: {},
-
   data() {
     return {
-      videos: [],
-      videosz: [
+      videos: [
         {
           name: "Titre 1",
           category: "guitare",
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 2",
@@ -51,7 +46,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 3",
@@ -59,7 +54,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 4",
@@ -67,7 +62,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 5",
@@ -75,7 +70,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 6",
@@ -83,7 +78,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 7",
@@ -91,7 +86,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 8",
@@ -99,7 +94,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 9",
@@ -107,7 +102,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 10",
@@ -115,7 +110,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
         {
           name: "Titre 11",
@@ -123,7 +118,7 @@ export default {
           upload_date: "09 octobre 2022",
           views: 45000,
           likes: 23554,
-          status: "online"
+          status: "online",
         },
       ],
     };

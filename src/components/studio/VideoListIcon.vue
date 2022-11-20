@@ -20,10 +20,6 @@
 <script lang="ts">
 export default {
   name: "VideoListIcon",
-
-  components: {},
-
-  props: {},
 };
 </script>
 ngs_

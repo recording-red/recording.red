@@ -21,9 +21,5 @@
 <script lang="ts">
 export default {
   name: "Logo",
-
-  components: {},
-
-  props: {},
 };
 </script>

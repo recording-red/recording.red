@@ -55,7 +55,5 @@ export default {
   name: "NavBar",
 
   components: { Logo, Search, SearchIcon, InstrumentIcon, UserIcon },
-
-  props: {},
 };
 </script>

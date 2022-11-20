@@ -12,9 +12,5 @@
 <script lang="ts">
 export default {
   name: "SettingsIcon",
-
-  components: {},
-
-  props: {},
 };
 </script>

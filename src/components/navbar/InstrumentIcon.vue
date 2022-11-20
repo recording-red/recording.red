@@ -15,9 +15,5 @@
 <script lang="ts">
 export default {
   name: "InstrumentIcon",
-
-  components: {},
-
-  props: {},
 };
 </script>
