@@ -3,9 +3,7 @@
     <v-app>
       <v-main>
         <NavBar />
-        <v-content>
-          <v-container fluid><router-view></router-view></v-container>
-        </v-content>
+        <v-container fluid><router-view></router-view></v-container>
       </v-main>
     </v-app>
   </v-app>
