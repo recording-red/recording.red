@@ -2,10 +2,11 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import HelloWorld from "./components/HelloWorld.vue";
+import Logo from "./components/navbar/Logo.vue";
 </script>
 
 <template>
-  <v-alert type="success">I'm a success alert.</v-alert>
+  <Logo />
   <div>
     <a href="https://vitejs.dev" target="_blank">
       <img src="/vite.svg" class="logo" alt="Vite logo" />
