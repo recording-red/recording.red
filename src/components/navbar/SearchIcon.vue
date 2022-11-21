@@ -2,12 +2,7 @@
 
 <template>
   <!-- // SearchWhite.png -->
-  <v-img
-    class="search-icon"
-    src="@/assets/search.png"
-    max-width="30px"
-    margin-left="10px"
-  />
+  <v-img class="search-icon" :src="src" max-width="30px" margin-left="10px" />
 </template>
 
 <style>
@@ -18,7 +13,15 @@
 </style>
 
 <script lang="ts">
+import Src from "@/assets/search.png";
+
 export default {
   name: "SearchIcon",
+
+  data() {
+    return {
+      src: Src,
+    };
+  },
 };
 </script>
