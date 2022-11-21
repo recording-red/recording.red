@@ -2,7 +2,7 @@
 
 <template>
   <!-- // LogoHiragino.png -->
-  <v-img class="logo" :src="logo" max-width="150px" margin-left="10px" />
+  <v-img class="logo" :src="src" max-width="150px" margin-left="10px" />
 </template>
 
 <style>
@@ -14,14 +14,14 @@
 </style>
 
 <script lang="ts">
-import logo from "@/assets/logo.png";
+import Src from "@/assets/logo.png";
 
 export default {
   name: "Logo",
 
   data() {
     return {
-      logo: logo,
+      src: Src,
     };
   },
 };

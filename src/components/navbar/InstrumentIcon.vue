@@ -2,7 +2,7 @@
 
 <template>
   <!-- // Guitar.png -->
-  <v-img class="instrument-icon" src="@/assets/intruments/guitar_white.png" />
+  <v-img class="instrument-icon" :src="src" />
 </template>
 
 <style>
@@ -13,7 +13,15 @@
 </style>
 
 <script lang="ts">
+import Src from "@/assets/intruments/guitar_white.png";
+
 export default {
   name: "InstrumentIcon",
+
+  data() {
+    return {
+      src: Src,
+    };
+  },
 };
 </script>
