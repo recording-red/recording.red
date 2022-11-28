@@ -24,7 +24,7 @@
 .navbar {
   background-color: $color-black;
   color: $color-white;
-  min-height: 4em;
+  min-height: $navbar-height;
   min-width: 100%;
   position: fixed;
   top: 0;

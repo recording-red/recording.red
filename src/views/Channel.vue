@@ -1,10 +1,10 @@
 <template>
-  <!-- <button @click="increment">aaa</button> -->
-
-  <div class="header">
-    <Picture />
-    <Background />
-    <Description />
+  <div class="channel">
+    <div class="header">
+      <Picture />
+      <Background />
+      <Description />
+    </div>
   </div>
 </template>
 
