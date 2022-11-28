@@ -38,7 +38,7 @@
 }
 
 .padding-right {
-  padding-right: 0.2em;
+  padding-right: 0.8em;
 }
 
 .padding-top {
@@ -67,6 +67,9 @@
   }
   .user-icon {
     max-width: 2em;
+  }
+  .padding-right {
+    padding-right: 0.4em;
   }
 }
 </style>
