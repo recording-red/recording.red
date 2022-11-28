@@ -2,10 +2,13 @@
 
 <template>
   <div class="navbar">
-    <div class="navbar-item"><Logo /></div>
-    <div class="navbar-item navbar-item-shrink"><Search /></div>
     <div class="navbar-item">
-      <InstrumentIcon class="padding-righ"/>
+      <Logo class="logo" />
+      <SmallLogo class="small-logo"/>
+    </div>
+    <div class="navbar-item navbar-item-shrink"><Search class="search"/></div>
+    <div class="navbar-item">
+      <InstrumentIcon class="padding-right" />
       <UserIcon />
     </div>
   </div>
@@ -34,14 +37,34 @@
   flex-shrink: 3;
 }
 
-.padding-righ {
+.padding-right {
   padding-right: 0.5em;
+}
+
+.small-logo {
+  visibility: hidden;
+  max-width: 0em;
+}
+
+@media screen and (max-width: 750px) {
+    .logo {
+        visibility: hidden;
+        max-width: 0em;
+    }
+    .small-logo {
+        visibility: visible;
+        max-width: 2.5em;
+    }
+    .search {
+      max-width: 30vw;
+    }
 }
 
 </style>
 
 <script lang="ts">
 import Logo from "@/components/navbar/Logo.vue";
+import SmallLogo from "@/components/navbar/SmallLogo.vue";
 import Search from "@/components/navbar/Search.vue";
 import InstrumentIcon from "@/components/navbar/InstrumentIcon.vue";
 import UserIcon from "@/components/navbar/UserIcon.vue";
@@ -49,6 +72,6 @@ import UserIcon from "@/components/navbar/UserIcon.vue";
 export default {
   name: "NavBar",
 
-  components: { Logo, Search, InstrumentIcon, UserIcon },
+  components: { Logo, SmallLogo, Search, InstrumentIcon, UserIcon },
 };
 </script>
