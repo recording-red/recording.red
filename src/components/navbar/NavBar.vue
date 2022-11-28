@@ -3,15 +3,17 @@
 <template>
   <div class="navbar">
     <div class="navbar-item">
-      <a href="/">
+      <router-link to="/">
         <Logo class="logo" />
         <SmallLogo class="small-logo" />
-      </a>
+      </router-link>
     </div>
     <div class="navbar-item navbar-item-shrink"><Search class="search" /></div>
     <div class="navbar-item padding-top">
       <InstrumentIcon class="instrument-icon padding-right" />
-      <UserIcon class="user-icon" />
+      <router-link to="/studio">
+        <UserIcon class="user-icon" />
+      </router-link>
     </div>
   </div>
 </template>
