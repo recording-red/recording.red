@@ -3,8 +3,10 @@
 <template>
   <div class="navbar">
     <div class="navbar-item">
-      <Logo class="logo" />
-      <SmallLogo class="small-logo" />
+      <a href="/">
+        <Logo class="logo" />
+        <SmallLogo class="small-logo" />
+      </a>
     </div>
     <div class="navbar-item navbar-item-shrink"><Search class="search" /></div>
     <div class="navbar-item padding-top">

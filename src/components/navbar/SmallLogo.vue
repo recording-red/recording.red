@@ -1,5 +1,4 @@
 <template>
-  <!-- // LogoHiragino.png -->
   <img class="logo" :src="src" />
 </template>
 
