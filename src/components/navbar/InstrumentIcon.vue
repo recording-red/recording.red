@@ -1,14 +1,22 @@
 <!-- https://next.vuetifyjs.com/en/components/images/ -->
 
 <template>
-  <!-- // Guitar.png -->
-  <v-img class="instrument-icon" :src="src" />
+  <span class="circle">
+    <img class="instrument-icon" :src="src" />
+  </span>
 </template>
 
 <style>
+.circle {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .instrument-icon {
-  max-width: 30px;
-  margin-left: 10px;
+  max-height: 2em;
+  max-width: 2em;
 }
 </style>
 

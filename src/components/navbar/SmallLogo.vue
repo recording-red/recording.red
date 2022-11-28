@@ -11,10 +11,10 @@
 </style>
 
 <script lang="ts">
-import Src from "@/assets/logo.png";
+import Src from "@/assets/logo_circle.png";
 
 export default {
-  name: "Logo",
+  name: "SmallLogo",
 
   data() {
     return {

@@ -19,7 +19,7 @@
 
 <script lang="ts">
 // import { storeToRefs } from "pinia";
-import { userStore } from "@/stores/user";
+import { userStore } from "../stores/user";
 import Picture from "@/components/channel/Picture.vue";
 import Background from "@/components/channel/Background.vue";
 import Description from "@/components/channel/Description.vue";
