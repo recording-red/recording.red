@@ -4,12 +4,12 @@
   <div class="navbar">
     <div class="navbar-item">
       <Logo class="logo" />
-      <SmallLogo class="small-logo"/>
+      <SmallLogo class="small-logo" />
     </div>
-    <div class="navbar-item navbar-item-shrink"><Search class="search"/></div>
+    <div class="navbar-item navbar-item-shrink"><Search class="search" /></div>
     <div class="navbar-item padding-top">
-      <InstrumentIcon class="padding-right" />
-      <UserIcon />
+      <InstrumentIcon class="instrument-icon padding-right" />
+      <UserIcon class="user-icon" />
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@
 }
 
 .padding-right {
-  padding-right: 0.5em;
+  padding-right: 0.2em;
 }
 
 .padding-top {
@@ -51,19 +51,24 @@
 }
 
 @media screen and (max-width: 750px) {
-    .logo {
-        visibility: hidden;
-        max-width: 0em;
-    }
-    .small-logo {
-        visibility: visible;
-        max-width: 2.5em;
-    }
-    .search {
-      max-width: 30vw;
-    }
+  .logo {
+    visibility: hidden;
+    max-width: 0em;
+  }
+  .small-logo {
+    visibility: visible;
+    max-width: 2.5em;
+  }
+  .search {
+    max-width: 26vw;
+  }
+  .instrument-icon {
+    max-width: 2em;
+  }
+  .user-icon {
+    max-width: 2em;
+  }
 }
-
 </style>
 
 <script lang="ts">
