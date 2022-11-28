@@ -1,11 +1,13 @@
 <template>
-  <v-app>
-    <v-main>
-      <NavBar />
-      <v-container class="pa-0" fluid><router-view></router-view></v-container>
-    </v-main>
-  </v-app>
+  <div>
+    <NavBar />
+    <router-view />
+  </div>
 </template>
+
+<style lang="scss">
+@import "src/assets/style.scss";
+</style>
 
 <script setup lang="ts">
 import NavBar from "@/components/navbar/NavBar.vue";

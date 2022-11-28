@@ -1,59 +1,54 @@
 <!-- https://next.vuetifyjs.com/en/components/navigation-drawers/ -->
 
 <template>
-  <div
-    class="d-flex justify-center"
-    style="background-color: black; color: white; align-items: center"
-  >
-    <Logo class="pa-2" />
-    <Search class="pa-2" />
-    <SearchIcon class="pa-2" />
-    <InstrumentIcon class="pa-2" />
-    <UserIcon class="pa-2" />
+  <div class="navbar">
+    <div class="navbar-item"><Logo /></div>
+    <div class="navbar-item navbar-item-shrink"><Search /></div>
+    <div class="navbar-item">
+      <InstrumentIcon class="padding-righ"/>
+      <UserIcon />
+    </div>
   </div>
-
-  <!-- <v-app-bar color="black"> -->
-  <!-- <div class="d-flex justify-space-around mb-6" flat tile>
-      <div v-for="n in 3" :key="n" class="pa-2" >
-        justify-space-around
-      </div>
-    </div> -->
-  <!-- </v-app-bar> -->
-  <!-- <div color="black">
-    <v-card
-      class="d-flex flex-row mb-6"
-      flat
-      tile
-    >
-      <v-card v-for="n in 3" :key="n" class="pa-2" outlined tile>
-        Flex item {{ n }}
-      </v-card>
-    </v-card>
-  </div> -->
-
-  <!-- <v-app-bar color="black">
-    <Logo />
-
-    <v-spacer />
-
-    <v-btn variant="text" icon="mdi-magnify"></v-btn>
-
-    <v-btn variant="text" icon="mdi-filter"></v-btn>
-
-    <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
-  </v-app-bar> -->
 </template>
+
+<style lang="scss">
+@import "src/assets/style.scss";
+
+.navbar {
+  background-color: $color-black;
+  color: $color-white;
+  min-height: 4em;
+  min-width: 100%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-item {
+  align-self: center;
+  margin: 0em 1em 0em 1em;
+}
+
+.navbar-item-shrink {
+  flex-shrink: 3;
+}
+
+.padding-righ {
+  padding-right: 0.5em;
+}
+
+</style>
 
 <script lang="ts">
 import Logo from "@/components/navbar/Logo.vue";
 import Search from "@/components/navbar/Search.vue";
-import SearchIcon from "@/components/navbar/SearchIcon.vue";
 import InstrumentIcon from "@/components/navbar/InstrumentIcon.vue";
 import UserIcon from "@/components/navbar/UserIcon.vue";
 
 export default {
   name: "NavBar",
 
-  components: { Logo, Search, SearchIcon, InstrumentIcon, UserIcon },
+  components: { Logo, Search, InstrumentIcon, UserIcon },
 };
 </script>

@@ -2,13 +2,12 @@
 
 <template>
   <!-- // UserWhite.png -->
-  <v-img class="user-icon" :src="src" max-width="30px" margin-left="10px" />
+  <img class="user-icon" :src="src" />
 </template>
 
 <style>
 .user-icon {
-  max-width: 30px;
-  margin-left: 10px;
+  max-height: 2em;
 }
 </style>
 

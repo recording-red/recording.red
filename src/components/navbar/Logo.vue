@@ -1,15 +1,12 @@
-<!-- https://next.vuetifyjs.com/en/components/images/ -->
-
 <template>
   <!-- // LogoHiragino.png -->
-  <v-img class="logo" :src="src" max-width="150px" margin-left="10px" />
+  <img class="logo" :src="src" />
 </template>
 
 <style>
 .logo {
-  max-width: 150px;
-  min-width: 150px;
-  margin-left: 10px;
+  max-height: 2.5em;
+  display: block;
 }
 </style>
 
