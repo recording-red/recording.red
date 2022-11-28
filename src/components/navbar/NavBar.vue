@@ -7,7 +7,7 @@
       <SmallLogo class="small-logo"/>
     </div>
     <div class="navbar-item navbar-item-shrink"><Search class="search"/></div>
-    <div class="navbar-item">
+    <div class="navbar-item padding-top">
       <InstrumentIcon class="padding-right" />
       <UserIcon />
     </div>
@@ -39,6 +39,10 @@
 
 .padding-right {
   padding-right: 0.5em;
+}
+
+.padding-top {
+  padding-top: 0.5em;
 }
 
 .small-logo {
