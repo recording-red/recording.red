@@ -13,14 +13,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
 }
 
 .background-text {
   max-width: 15vw;
   text-align: center;
   font-weight: bold;
-  background-color: red;
 }
 </style>
 
