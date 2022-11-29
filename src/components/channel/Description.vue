@@ -8,8 +8,8 @@
   <div class="channel-header-description">
     <div class="channel-header-description-box">
       <div class="channel-header-description-text">
-        Cliquez dans cette zone pour vous presenter, 
-        presenter votre chaine, et vous adresser a vos auditeurs.
+        Cliquez dans cette zone pour vous presenter, presenter votre chaine, et
+        vous adresser a vos auditeurs.
       </div>
     </div>
   </div>

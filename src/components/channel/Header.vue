@@ -15,7 +15,6 @@
   min-height: $channel-header-height;
   display: flex;
   justify-content: center;
-
 }
 
 .channel-header-item {
