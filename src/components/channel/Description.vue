@@ -1,18 +1,25 @@
 <template>
   <div class="description">
-    Cliquez dans cette zone pour vous presenter, presenter votre chaine, et vous
-    adresser a vos auditeurs.
+    <div class="description-text">
+      Cliquez dans cette zone pour vous presenter, presenter votre chaine, et
+      vous adresser a vos auditeurs.
+    </div>
   </div>
 </template>
 
 <style>
 .description {
-  height: 35vh;
-  width: 35vh;
-  background-color: #bebebe;
-  color: white;
-  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
+
+.description-text {
+  max-width: 15vw;
   text-align: center;
+  font-weight: bold;
+  background-color: red;
 }
 </style>
 

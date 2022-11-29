@@ -1,12 +1,26 @@
 <template>
   <div class="background">
-    Cliquez dans cette zone pour ajouter un fond d'ecran
+    <div class="background-text">
+      Cliquez dans cette zone pour ajouter un fond d'écran
+    </div>
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "src/assets/style.scss";
+
 .background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+}
+
+.background-text {
+  max-width: 15vw;
+  text-align: center;
   font-weight: bold;
+  background-color: red;
 }
 </style>
 

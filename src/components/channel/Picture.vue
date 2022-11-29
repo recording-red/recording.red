@@ -11,8 +11,6 @@
   margin: 0 auto;
 }
 .picture {
-  height: 35vh;
-  width: 35vh;
   display: inline-block;
   border-radius: 50%;
   border: 0.4em solid white;

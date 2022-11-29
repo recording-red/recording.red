@@ -11,7 +11,13 @@
   </div>
 </template>
 
-<style lang="css">
+<style lang="scss">
+@import "src/assets/style.scss";
+
+.container {
+  padding-top: $navbar-height;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition-property: opacity;

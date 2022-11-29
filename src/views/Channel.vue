@@ -1,6 +1,6 @@
 <template>
   <div class="channel">
-    <div class="header">
+    <div class="channel-header">
       <Picture />
       <Background />
       <Description />
@@ -8,17 +8,23 @@
   </div>
 </template>
 
-<style>
-.header {
-  background-color: #ededed;
+<style lang="scss">
+@import "src/assets/style.scss";
+
+.channel-header {
+  background-color: $color-medium-grey;
   min-width: 100vw;
-  padding: 2em 0em 2em 0em;
+  min-height: $channel-header-height;
   display: flex;
+  // justify-content: center;
+}
+
+.channel-header-item {
+  flex-grow: 1;
 }
 </style>
 
 <script lang="ts">
-// import { storeToRefs } from "pinia";
 import { userStore } from "../stores/user";
 import Picture from "@/components/channel/Picture.vue";
 import Background from "@/components/channel/Background.vue";
