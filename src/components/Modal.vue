@@ -3,7 +3,7 @@
 <template>
   <Transition name="modal">
     <div v-if="show" class="modal-mask">
-      <div class="modal-wrapper">
+      <div class="modal-wrapper" v-on:click.self="$emit('close')">
         <div class="modal-container">
           <div class="modal-body">
             <slot name="body">default body</slot>
