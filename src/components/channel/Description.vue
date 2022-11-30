@@ -1,10 +1,4 @@
 <template>
-  <!-- <div class="description">
-    <div class="description-box">
-      <div class="description-text">
-      </div>
-    </div>
-  </div> -->
   <div class="channel-header-description">
     <div class="channel-header-description-box">
       <div class="channel-header-description-text">
