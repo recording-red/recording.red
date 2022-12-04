@@ -9,7 +9,7 @@
     <!-- use the modal component, pass in the prop -->
     <modal :show="showModal" @close="showModal = false">
       <template #body>
-        <BackgroundUpload />
+        <ImageUpload />
       </template>
     </modal>
   </Teleport>
@@ -33,12 +33,13 @@
 
 <script lang="ts">
 import Modal from "@/components/Modal.vue";
-import BackgroundUpload from "@/components/channel/BackgroundUpload.vue";
+// import BackgroundUpload from "@/components/channel/BackgroundUpload.vue";
+import ImageUpload from "@/components/image_upload/ImageUpload.vue";
 
 export default {
   name: "Background",
 
-  components: { Modal, BackgroundUpload },
+  components: { Modal, ImageUpload },
 
   data() {
     return {

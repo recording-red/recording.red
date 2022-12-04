@@ -1,46 +1,22 @@
 <template>
-  <!-- <div class="container" @click="uploadFile()" /> -->
   <div
-    class="img-container"
+    class="file-container"
     v-if="item.imageUrl === null"
     @click="uploadFile()"
   />
   <img class="img" v-if="item.imageUrl" :src="item.imageUrl" />
   <input ref="file" type="file" @change="onChange" hidden />
-  <!-- </div> -->
 </template>
 
 <style lang="scss" scoped>
 @import "src/assets/style.scss";
 
-.img-container {
+.file-container {
   height: 20em;
   background-color: $color-dark-grey;
 }
-// .container {
-//   // height: 100%;
-//   // // width: 100%;
-//   // vertical-align: top;
-//   // // display: flex;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   overflow: hidden;
-//   height: 100%;
-//   background-color: $color-dark-grey;
-// }
 
 .img {
-  // vertical-align: top;
-  // height: -webkit-fill-available;
-  // // position: absolute;
-  // // top: 50%;
-  // // left: 50%;
-  // // transform: translate(-50%, -50%);
-  // // object-fit: cover;
-  // flex-shrink: 0;
-  // min-width: 100%;
-  // min-height: 100%;
   height: 20em;
   object-fit: scale-down;
   background-color: $color-dark-grey;
@@ -49,7 +25,7 @@
 
 <script lang="ts">
 export default {
-  name: "ImageUpload",
+  name: "FileUpload",
 
   data() {
     return {
@@ -66,7 +42,7 @@ export default {
       fileInputElement.click();
     },
 
-    onChange(e): void {
+    onChange(e: { target: { files: any[]; }; }): void {
       const file = e.target.files[0];
       this.image = file;
       this.item.imageUrl = URL.createObjectURL(file);

@@ -33,22 +33,6 @@
   color: $color-white;
   text-align: center;
 }
-
-// .description {
-//   background-color: $color-dark-grey;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-// }
-
-// .description-text {
-//   text-align: center;
-//   font-weight: bold;
-//   min-width: 15vw;
-//   max-width: 15vw;
-//   min-height: 15vh;
-//   max-height: 15vh;
-// }
 </style>
 
 <script lang="ts">
