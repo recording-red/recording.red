@@ -8,14 +8,14 @@
   <Teleport to="body">
     <!-- use the modal component, pass in the prop -->
     <modal :show="showModal" @close="showModal = false">
-      <template #header>
-        <h3>custom header</h3>
+      <template #body>
+        <BackgroundUpload />
       </template>
     </modal>
   </Teleport>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "src/assets/style.scss";
 
 .background {
@@ -33,11 +33,12 @@
 
 <script lang="ts">
 import Modal from "@/components/Modal.vue";
+import BackgroundUpload from "@/components/channel/BackgroundUpload.vue";
 
 export default {
   name: "Background",
 
-  components: { Modal },
+  components: { Modal, BackgroundUpload },
 
   data() {
     return {
