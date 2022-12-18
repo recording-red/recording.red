@@ -31,10 +31,31 @@
         </select>
       </div>
     </div>
-  </div>
 
-  <br />instrument = {{ instrument }} <br />selectedInstrument =
-  {{ selectedInstrument }}
+    <!-- Language -->
+    <div class="channel-form-row">
+      <div class="channel-form-item-label">
+        <label for="channel-language"
+          >Vous vous exprimerez principalement en</label
+        >
+      </div>
+      <div class="channel-form-item-value">
+        <select
+          id="channel-language"
+          v-model="selectedLanguage"
+          @change="selectLanguage()"
+        >
+          <option
+            v-for="opt in languageOptions"
+            :key="opt.id"
+            :label="opt.name"
+            :value="opt.name"
+            :selected="opt.selected"
+          ></option>
+        </select>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>
@@ -81,6 +102,13 @@ export default {
         { id: 3, name: "Basse", selected: false },
         { id: 4, name: "Batterie", selected: false },
       ],
+      language: 0,
+      selectedLanguage: "",
+      languageOptions: [
+        { id: 1, name: "Français", selected: true },
+        { id: 2, name: "English", selected: false },
+        { id: 3, name: "Deutsch", selected: false },
+      ],
     };
   },
 
@@ -89,6 +117,14 @@ export default {
       this.instrumentOptions.map((opt) => {
         if (opt.name === this.selectedInstrument) {
           this.instrument = opt.id;
+          return;
+        }
+      });
+    },
+    selectLanguage() {
+      this.languageOptions.map((opt) => {
+        if (opt.name === this.selectedLanguage) {
+          this.language = opt.id;
           return;
         }
       });
