@@ -55,10 +55,43 @@
         </select>
       </div>
     </div>
+
+    <!-- Music Style -->
+    <div class="channel-form-row">
+      <div class="channel-form-item-label">
+        <label for="channel-style">Sélectionnez vos styles de musique</label>
+      </div>
+      <div class="channel-form-item-value badge">
+        <Badge value="blues" />
+        <Badge value="finger picking" />
+        <Badge value="funk" />
+        <br />
+        <Badge value="jazz" />
+        <Badge value="metal" />
+        <Badge value="neo soul" />
+        <Badge value="reggae" />
+        <br />
+        <Badge value="rock'n roll" />
+      </div>
+    </div>
   </div>
+
+  <!-- Delete -->
+  <div class="channel-form-row delete">
+    <button class="delete-button">Supprimer la chaine</button>
+  </div>
+
+  <!-- Cancel - Validate -->
+  <div class="channel-form-row cancelvalidate">
+    <button class="cancelvalidate-button">Annuler</button>
+    <button class="cancelvalidate-button">Valider</button>
+  </div>
+
 </template>
 
-<style>
+<style lang="scss" scoped>
+@import "src/assets/style.scss";
+
 .channel-form-row {
   display: flex;
   justify-content: center;
@@ -85,15 +118,52 @@
   width: 21em;
   padding: 0.3em 0.3em 0.3em 0.3em;
 }
+
+.badge {
+  margin: 0px 5px 5px 0px;
+}
+
+.delete {
+  margin: 0px 25px 0px 25px;
+}
+
+.delete-button {
+  width: fit-content;
+  padding: 10px 25px 10px 25px;
+  font-size: large;
+  background-color: $color-red;
+  color: $color-white;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.cancelvalidate {
+  margin: 0px 25px 0px 25px;
+}
+
+.cancelvalidate-button {
+  width: fit-content;
+  min-width: 275px;
+  padding: 10px 25px 10px 25px;
+  font-size: large;
+  background-color: $color-black;
+  color: $color-white;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
 </style>
 
 <script lang="ts">
+import Badge from "@/components/Badge.vue";
+
 export default {
   name: "Form",
 
+  components: { Badge },
+
   data() {
     return {
-      name: "name",
+      name: "",
       instrument: 0,
       selectedInstrument: "",
       instrumentOptions: [
@@ -106,8 +176,8 @@ export default {
       selectedLanguage: "",
       languageOptions: [
         { id: 1, name: "Français", selected: true },
-        { id: 2, name: "English", selected: false },
-        { id: 3, name: "Deutsch", selected: false },
+        { id: 2, name: "Anglais", selected: false },
+        { id: 3, name: "Allemand", selected: false },
       ],
     };
   },
