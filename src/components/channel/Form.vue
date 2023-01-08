@@ -62,16 +62,7 @@
         <label for="channel-style">Sélectionnez vos styles de musique</label>
       </div>
       <div class="channel-form-item-value badge">
-        <Badge value="blues" />
-        <Badge value="finger picking" />
-        <Badge value="funk" />
-        <br />
-        <Badge value="jazz" />
-        <Badge value="metal" />
-        <Badge value="neo soul" />
-        <Badge value="reggae" />
-        <br />
-        <Badge value="rock'n roll" />
+        <Badge v-for="opt in badgeOptions" :value="opt.name" />
       </div>
     </div>
   </div>
@@ -84,14 +75,17 @@
   <!-- Cancel - Validate -->
   <div class="channel-form-row cancelvalidate">
     <button class="cancelvalidate-button">Annuler</button>
-    <button class="cancelvalidate-button">Valider</button>
+    <button class="cancelvalidate-button" v-on:click="validate">Valider</button>
   </div>
-
 </template>
 
 <style lang="scss" scoped>
 @import "src/assets/style.scss";
 
+.channel-form {
+  // width: 75vh;
+  // align-content: center;
+}
 .channel-form-row {
   display: flex;
   justify-content: center;
@@ -164,6 +158,7 @@ export default {
   data() {
     return {
       name: "",
+      vignette: "",
       instrument: 0,
       selectedInstrument: "",
       instrumentOptions: [
@@ -178,6 +173,17 @@ export default {
         { id: 1, name: "Français", selected: true },
         { id: 2, name: "Anglais", selected: false },
         { id: 3, name: "Allemand", selected: false },
+      ],
+      badgeOptions: [
+        { id: 1, name: "blues", selected: false },
+        { id: 2, name: "fingerpicking", selected: false },
+        { id: 3, name: "funk", selected: false },
+        { id: 4, name: "jazz", selected: false },
+        { id: 5, name: "metal", selected: false },
+        { id: 6, name: "neo soul", selected: false },
+        { id: 7, name: "reggae", selected: false },
+        { id: 8, name: "rock'n roll", selected: false },
+        { id: 9, name: "rock", selected: false },
       ],
     };
   },
@@ -198,6 +204,28 @@ export default {
           return;
         }
       });
+    },
+    async validate() {
+      const data = {
+        name: this.name,
+        vignette: this.vignette,
+      };
+
+      const response = await fetch(
+        import.meta.env.VITE_RECRED_URL + "/channel/",
+        {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: JSON.stringify(data),
+        }
+      );
     },
   },
 };
