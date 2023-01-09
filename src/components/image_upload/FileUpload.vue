@@ -1,11 +1,7 @@
 <template>
-  <div
-    class="file-container"
-    v-if="item.imageUrl === null"
-    @click="uploadFile()"
-  />
-  <img class="img" v-if="item.imageUrl" :src="item.imageUrl" />
-  <input ref="file" type="file" @change="onChange" hidden />
+  <div class="file-container" v-if="fileUrl === ''" @click="uploadFile()" />
+  <img class="img" v-else :src="fileUrl" />
+  <input type="file" ref="file" v-on:change="onChange" hidden />
 </template>
 
 <style lang="scss" scoped>
@@ -29,23 +25,22 @@ export default {
 
   data() {
     return {
-      item: {
-        //...
-        image: null,
-        imageUrl: null,
+      fileUrl: "",
+      $refs: {
+        file: HTMLInputElement.prototype,
       },
     };
   },
   methods: {
     uploadFile(): void {
-      let fileInputElement = this.$refs.file;
-      fileInputElement.click();
+      this.$refs.file.click();
     },
 
-    onChange(e: { target: { files: any[]; }; }): void {
-      const file = e.target.files[0];
-      this.image = file;
-      this.item.imageUrl = URL.createObjectURL(file);
+    onChange(): void {
+      const files = this.$refs.file.files;
+      if (files != null) {
+        this.fileUrl = URL.createObjectURL(files[0]);
+      }
     },
   },
 };
