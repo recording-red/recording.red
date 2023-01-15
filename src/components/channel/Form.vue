@@ -68,13 +68,13 @@
   </div>
 
   <!-- Delete -->
-  <div class="channel-form-row delete">
+  <!-- <div class="channel-form-row delete">
     <button class="delete-button">Supprimer la chaine</button>
-  </div>
+  </div> -->
 
   <!-- Cancel - Validate -->
   <div class="channel-form-row cancelvalidate">
-    <button class="cancelvalidate-button">Annuler</button>
+    <!-- <button class="cancelvalidate-button">Annuler</button> -->
     <button class="cancelvalidate-button" v-on:click="validate">Valider</button>
   </div>
 </template>
@@ -158,7 +158,9 @@ export default {
   data() {
     return {
       name: "",
-      vignette: "",
+      description: "",
+      miniature: null,
+      background: null,
       instrument: 0,
       selectedInstrument: "",
       instrumentOptions: [
@@ -188,6 +190,10 @@ export default {
     };
   },
 
+  async created() {
+    await this.fetchLanguages();
+  },
+
   methods: {
     selectInstrument() {
       this.instrumentOptions.map((opt) => {
@@ -196,6 +202,23 @@ export default {
           return;
         }
       });
+    },
+    async fetchLanguages() {
+      const response = await fetch(
+        import.meta.env.VITE_RECRED_URL + "/language/",
+        {
+          method: "GET", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        }
+      );
+      this.languageOptions = await response.json();
     },
     selectLanguage() {
       this.languageOptions.map((opt) => {
@@ -208,7 +231,13 @@ export default {
     async validate() {
       const data = {
         name: this.name,
-        vignette: this.vignette,
+        description: this.description,
+        team_id: 1,
+        language_id: this.language,
+        miniature: this.miniature,
+        background: this.background,
+        instruments: [],
+        styles: [],
       };
 
       const response = await fetch(
