@@ -62,7 +62,7 @@
         <label for="channel-style">Sélectionnez vos styles de musique</label>
       </div>
       <div class="channel-form-item-value badge">
-        <Badge v-for="opt in badgeOptions" :value="opt.name" />
+        <Badge v-for="opt in styleOptions" :value="opt.name" />
       </div>
     </div>
   </div>
@@ -176,7 +176,7 @@ export default {
         { id: 2, name: "Anglais", selected: false },
         { id: 3, name: "Allemand", selected: false },
       ],
-      badgeOptions: [
+      styleOptions: [
         { id: 1, name: "blues", selected: false },
         { id: 2, name: "fingerpicking", selected: false },
         { id: 3, name: "funk", selected: false },
@@ -192,6 +192,8 @@ export default {
 
   async created() {
     await this.fetchLanguages();
+    await this.fetchStyles();
+    await this.fetchInstruments();
   },
 
   methods: {
@@ -220,6 +222,40 @@ export default {
       );
       this.languageOptions = await response.json();
     },
+    async fetchStyles() {
+      const response = await fetch(
+        import.meta.env.VITE_RECRED_URL + "/style/",
+        {
+          method: "GET", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        }
+      );
+      this.styleOptions = await response.json();
+    },
+    async fetchInstruments() {
+      const response = await fetch(
+        import.meta.env.VITE_RECRED_URL + "/instrument/",
+        {
+          method: "GET", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          headers: {
+            "Content-Type": "application/json",
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        }
+      );
+      this.instrumentOptions = await response.json();
+    },
     selectLanguage() {
       this.languageOptions.map((opt) => {
         if (opt.name === this.selectedLanguage) {
@@ -236,8 +272,8 @@ export default {
         language_id: this.language,
         miniature: this.miniature,
         background: this.background,
-        instruments: [],
-        styles: [],
+        instruments: [this.instrument],
+        styles: [this.styleOptions],
       };
 
       const response = await fetch(
