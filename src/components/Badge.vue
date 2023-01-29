@@ -22,6 +22,7 @@
 
 .off {
   background-color: $color-medium-grey;
+  color: $color-dark-grey;
 }
 </style>
 

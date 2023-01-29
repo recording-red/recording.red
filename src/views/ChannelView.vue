@@ -13,7 +13,7 @@ import Info from "@/components/channel/Info.vue";
 import Form from "@/components/channel/Form.vue";
 
 export default {
-  name: "Channel",
+  name: "ChannelView",
 
   components: { Header, Info, Form },
 

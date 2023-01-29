@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
-import Home from "@/views/Home.vue";
-import Studio from "@/views/Studio.vue";
+import ChannelView from "@/views/ChannelView.vue" 
+import HomeView from "@/views/HomeView.vue";
+import NewVideoView from "@/views/NewVideoView.vue";
+import StudioView from "@/views/StudioView.vue";
 
 //declare var require: any
 
@@ -10,12 +12,22 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: Home,
+      component: HomeView,
     },
     {
       path: "/studio",
       name: "studio",
-      component: Studio,
+      component: StudioView,
+    },
+    {
+      path: "/video/new",
+      name: "new video",
+      component: NewVideoView,
+    },
+    {
+      path: "/channel",
+      name: "channel",
+      component: ChannelView,
     },
   ],
 });

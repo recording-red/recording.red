@@ -1,22 +1,22 @@
 <template>
-  <div class="d-flex justify-space-between">
-    <ChannelDropdown class="pa-2" />
-    <VideoListIcon class="pa-2" />
-    <StatisticsIcon class="pa-2" />
-    <SettingsIcon class="pa-2" />
-    <AddVideoIcon class="pa-2" />
-    <FilterIcon class="pa-2" />
+  <div class="header">
+    <ChannelDropdown />
+    <VideoListIcon />
+    <StatisticsIcon />
+    <SettingsIcon />
+    <AddVideoIcon />
+    <FilterIcon />
   </div>
 </template>
 
 <script lang="ts">
-import ChannelDropdown from "./ChannelDropdown.vue";
-import VideoListIcon from "./VideoListIcon.vue";
-import StatisticsIcon from "./StatisticsIcon.vue";
-import SettingsIcon from "./SettingsIcon.vue";
-import AddVideoIcon from "./AddVideoIcon.vue";
-import FilterIcon from "./FilterIcon.vue";
-import SortIcon from "./SortIcon.vue";
+import ChannelDropdown from "@/components/studio/ChannelDropdown.vue";
+import VideoListIcon from "@/components/studio/VideoListIcon.vue";
+import StatisticsIcon from "@/components/studio/StatisticsIcon.vue";
+import SettingsIcon from "@/components/studio/SettingsIcon.vue";
+import AddVideoIcon from "@/components/studio/AddVideoIcon.vue";
+import FilterIcon from "@/components/studio/FilterIcon.vue";
+import SortIcon from "@/components/studio/SortIcon.vue";
 
 export default {
   name: "Header",
