@@ -10,8 +10,8 @@
 
 .badge {
   display: inline-block;
-  padding: 6px 15px 4px 15px;
-  border-radius: 5px;
+  padding: 3px 15px 1px 15px;
+  border-radius: 11px;
   text-transform: uppercase;
 }
 

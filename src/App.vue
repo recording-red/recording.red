@@ -15,7 +15,8 @@
 @import "src/assets/style.scss";
 
 .container {
-  padding-top: $navbar-height;
+  padding: 6em 6em 6em 6em;
+
 }
 
 .fade-enter-active,

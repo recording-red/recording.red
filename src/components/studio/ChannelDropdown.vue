@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <select v-model="selectedChannel" @change="selectChannel()">
-      <option
-        v-for="opt in channelOptions"
-        :key="opt.id"
-        :label="opt.name"
-        :value="opt.name"
-        :selected="opt.selected"
-      ></option>
-    </select>
-  </div>
+  <select v-model="selectedChannel" @change="selectChannel()">
+    <option
+      v-for="opt in channelOptions"
+      :key="opt.id"
+      :label="opt.name"
+      :value="opt.name"
+      :selected="opt.selected"
+    ></option>
+  </select>
 </template>
 
 <style lang="scss" scoped>
 select,
 input {
-  padding: 10px;
+  // padding: 10px;
   font-size: 20px;
   background-color: white;
   border-width: 0px;

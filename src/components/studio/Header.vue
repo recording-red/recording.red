@@ -1,13 +1,39 @@
 <template>
   <div class="header">
-    <ChannelDropdown />
-    <VideoListIcon />
-    <StatisticsIcon />
-    <SettingsIcon />
-    <AddVideoIcon />
-    <FilterIcon />
+    <div class="header-item">
+      <ChannelDropdown />
+      <VideoListIcon class="header-icon" />
+      <StatisticsIcon class="header-icon" />
+      <SettingsIcon class="header-icon" />
+    </div>
+    <div class="header-item">
+      <AddVideoIcon class="header-icon" />
+      <FilterIcon class="header-icon" />
+    </div>
   </div>
 </template>
+
+<style scoped>
+.header {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.header-item {
+  display: inline-block;
+}
+
+.header-icon {
+  width: 40px;
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  min-height: 40px;
+  max-height: 40px;
+  margin: 0px 10px 0px 10px;
+}
+</style>
 
 <script lang="ts">
 import ChannelDropdown from "@/components/studio/ChannelDropdown.vue";
