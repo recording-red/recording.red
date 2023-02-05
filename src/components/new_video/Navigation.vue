@@ -7,7 +7,7 @@
       <img class="img" :src="previous" />
     </button>
     <button class="bt selected">
-      <img class="img" :src="next" />
+      <img class="img" :src="next" @click="uploadFile()" />
     </button>
   </div>
 </template>
@@ -58,6 +58,20 @@ export default {
       next: Next,
       previous: Previous,
     };
+  },
+
+  methods: {
+    async uploadFile() {
+      import.meta.env.VITE_RECRED_URL + "/video/",
+        {
+          method: "POST", // *GET, POST, PUT, DELETE, etc.
+          mode: "cors", // no-cors, *cors, same-origin
+          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+          redirect: "follow", // manual, *follow, error
+          referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+          body: null,
+        };
+    },
   },
 };
 </script>

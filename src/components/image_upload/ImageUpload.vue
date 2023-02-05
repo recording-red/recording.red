@@ -1,6 +1,6 @@
 <template>
   <div class="image-upload">
-    <h1>Fond d'écran</h1>
+    <h1>Vignette</h1>
 
     <FileUpload />
 

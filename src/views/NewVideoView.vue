@@ -6,7 +6,7 @@
 
 <style lang="scss">
 .new-video {
-  padding: 3em 15em 3em 15em;
+  padding: 3em 3em 3em 3em;
 }
 </style>
 
