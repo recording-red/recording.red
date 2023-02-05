@@ -25,10 +25,8 @@
       iconNotSelected="/clock_black.png"
     />
   </div>
-  <div >
-    <div class="navigation-item">
-      <!-- <img class="naviation-img" src="/list_white.png" />" -->
-    </div>
+  <div class="nav">
+    <Navigation />
   </div>
 </template>
 
@@ -67,16 +65,21 @@ input {
   width: inherit;
   height: inherit;
 }
+
+.nav {
+  padding-top: 50px;
+}
 </style>
 
 <script lang="ts">
 import VideoUpload from "@/components/new_video/VideoUpload.vue";
 import Badge from "@/components/new_video/Badge.vue";
+import Navigation from "@/components/new_video/Navigation.vue";
 
 export default {
   name: "VideoBreadcrumb",
 
-  components: { VideoUpload, Badge },
+  components: { VideoUpload, Badge, Navigation },
 
   data() {
     return {

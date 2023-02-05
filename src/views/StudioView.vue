@@ -1,14 +1,20 @@
 <template>
-  <Studio />
-  <div class="add">
-    <bold
-      >Pour ajouter une vidéo, cliquez sur
-      <a class="button-plus" href="/video/new">➕</a></bold
-    >
+  <div class="studio">
+    <Studio />
+    <div class="add">
+      <bold
+        >Pour ajouter une vidéo, cliquez sur
+        <a class="button-plus" href="/video/new">➕</a></bold
+      >
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.studio {
+  padding: 3em 15em 3em 15em;
+}
+
 .add {
   display: flex;
   justify-content: center;
