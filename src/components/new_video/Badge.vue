@@ -1,8 +1,8 @@
 <template>
-  <div v-if="selected" class="badge on" v-on:click="select">
-    {{ value }}
+  <div v-if="selected" class="badge on">
+    <img :src="iconSelected" />{{ value }}
   </div>
-  <div v-else class="badge off" v-on:click="select">{{ value }}</div>
+  <div v-else class="badge off"><img :src="iconNotSelected" />{{ value }}</div>
 </template>
 
 <style lang="scss" scoped>
@@ -11,7 +11,7 @@
 .badge {
   display: inline-block;
   padding: 3px 15px 1px 15px;
-  border-radius: 7px;
+  border-radius: 11px;
   text-transform: uppercase;
 }
 
@@ -24,6 +24,11 @@
   background-color: $color-medium-grey;
   color: $color-dark-grey;
 }
+
+img {
+  max-height: 15px;
+  margin-right: 5px;
+}
 </style>
 
 <script lang="ts">
@@ -31,19 +36,10 @@ export default {
   name: "Badge",
 
   props: {
+    iconSelected: String,
+    iconNotSelected: String,
     value: String,
-  },
-
-  data() {
-    return {
-      selected: false,
-    };
-  },
-
-  methods: {
-    select: function (): void {
-      this.selected = !this.selected;
-    },
+    selected: Boolean,
   },
 };
 </script>

@@ -15,8 +15,7 @@
 @import "src/assets/style.scss";
 
 .container {
-  padding: 6em 6em 6em 6em;
-
+  padding: 4em 0em 4em 0em;
 }
 
 .fade-enter-active,

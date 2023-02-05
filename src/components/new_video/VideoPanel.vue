@@ -3,13 +3,32 @@
   <VideoUpload />
   <br />
   <div class="badge">
-    <Badge value="UPLOAD" />
-    <Badge value="INFORMATION" />
-    <Badge value="CATEGORIE" />
-    <Badge value="MISE EN LIGNE" />
+    <Badge
+      value="UPLOAD"
+      iconSelected="/upload_grey.png"
+      iconNotSelected="/upload_black.png"
+      selected
+    />
+    <Badge
+      value="INFORMATION"
+      iconSelected="/information_grey.png"
+      iconNotSelected="/information_black.png"
+    />
+    <Badge
+      value="CATEGORIE"
+      iconSelected="/check_grey.png"
+      iconNotSelected="/check_black.png"
+    />
+    <Badge
+      value="MISE EN LIGNE"
+      iconSelected="/clock_grey.png"
+      iconNotSelected="/clock_black.png"
+    />
   </div>
-  <div>
-    
+  <div >
+    <div class="navigation-item">
+      <!-- <img class="naviation-img" src="/list_white.png" />" -->
+    </div>
   </div>
 </template>
 
@@ -32,11 +51,27 @@ input {
 .badge {
   margin-right: 10px;
 }
+
+.navigation-item {
+  margin-top: 50px;
+  background-color: black;
+  min-width: 75px;
+  max-width: 75px;
+  width: 75px;
+  min-height: 50px;
+  max-height: 50px;
+  height: 50px;
+}
+
+.navigation-img {
+  width: inherit;
+  height: inherit;
+}
 </style>
 
 <script lang="ts">
 import VideoUpload from "@/components/new_video/VideoUpload.vue";
-import Badge from "@/components/Badge.vue";
+import Badge from "@/components/new_video/Badge.vue";
 
 export default {
   name: "VideoBreadcrumb",

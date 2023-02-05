@@ -30,6 +30,7 @@
   top: 0;
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 }
 
 .navbar-item {
