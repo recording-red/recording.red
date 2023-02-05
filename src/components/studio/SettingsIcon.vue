@@ -1,7 +1,5 @@
-<!-- https://next.vuetifyjs.com/en/components/images/ -->
-
 <template>
-  <img :src="src" max-width="40px" min-width="40px" margin-left="10px" />
+  <img :src="src" max-width="40px" min-width="40px" margin-left="10px" @click="editChannel()"/>
 </template>
 
 <script lang="ts">
@@ -15,5 +13,11 @@ export default {
       src: Src,
     };
   },
+
+  methods: {
+    editChannel() {
+      this.$router.push("channel");
+    }
+  }
 };
 </script>
