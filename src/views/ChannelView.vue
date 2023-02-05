@@ -1,16 +1,10 @@
 <template>
-  <div class="channel">
+  <div>
     <Header />
     <Info />
     <Form />
   </div>
 </template>
-
-<style lang="scss" scoped>
-.channel {
-  overflow: hidden;
-}
-</style>
 
 <script lang="ts">
 import { userStore } from "../stores/user";

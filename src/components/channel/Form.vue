@@ -62,7 +62,11 @@
         <label for="channel-style">Sélectionnez vos styles de musique</label>
       </div>
       <div class="channel-form-item-value badge">
-        <Badge v-for="opt in styleOptions" :value="opt.name" />
+        <Badge
+          v-for="opt in styleOptions"
+          :value="opt.name"
+          @click="clickStyle(opt.id)"
+        />
       </div>
     </div>
   </div>
@@ -83,12 +87,13 @@
 @import "src/assets/style.scss";
 
 .channel-form {
-  // width: 75vh;
+  width: 75vw;
   // align-content: center;
 }
 .channel-form-row {
   display: flex;
   justify-content: center;
+  // width: 60vw;
   margin: 1em 0em 1em 0em;
 }
 
@@ -264,7 +269,24 @@ export default {
         }
       });
     },
-    async validate() {
+    clickStyle(id: number) {
+      const style: any = this.styleOptions.at(id - 1);
+      if (typeof style.selected === "undefined") {
+        // the variable is defined
+        style.selected = true;
+      } else {
+        style.selected = !style.selected;
+      }
+    },
+    async validate(): Promise<void> {
+      const styles = this.styleOptions
+        .filter(function (s) {
+          return s.selected;
+        })
+        .map(function (s) {
+          return s.name;
+        });
+
       const data = {
         name: this.name,
         description: this.description,
@@ -272,8 +294,8 @@ export default {
         language_id: this.language,
         miniature: this.miniature,
         background: this.background,
-        instruments: [this.instrument],
-        styles: [this.styleOptions],
+        instruments: [this.selectedInstrument],
+        styles: styles,
       };
 
       const response = await fetch(
@@ -291,6 +313,8 @@ export default {
           body: JSON.stringify(data),
         }
       );
+
+      this.$router.push("studio");
     },
   },
 };
